@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarteraWeb", "CarteraWeb\CarteraWeb.csproj", "{9650E432-9BA8-4660-B5CF-CFFFC0D6722C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarteraWeb.Tests", "CarteraWeb.Tests\CarteraWeb.Tests.csproj", "{E77245DA-5E87-460B-ABB7-6E3D6E61C63E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9650E432-9BA8-4660-B5CF-CFFFC0D6722C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9650E432-9BA8-4660-B5CF-CFFFC0D6722C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9650E432-9BA8-4660-B5CF-CFFFC0D6722C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9650E432-9BA8-4660-B5CF-CFFFC0D6722C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77245DA-5E87-460B-ABB7-6E3D6E61C63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77245DA-5E87-460B-ABB7-6E3D6E61C63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77245DA-5E87-460B-ABB7-6E3D6E61C63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77245DA-5E87-460B-ABB7-6E3D6E61C63E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
