@@ -108,7 +108,7 @@ namespace EFRepository
             try
             {
                 Context.Set<TEntity>().Attach(modifiedEntity);
-                Context.Entry<TEntity>(modifiedEntity).State = EntityState.Modified;
+                Context.Entry<TEntity>(modifiedEntity).State = System.Data.EntityState.Modified;
                 Result = TrySaveChanges() > 0;
            
             }

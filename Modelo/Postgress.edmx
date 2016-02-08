@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="soapros_desaModel.Store" Provider="Npgsql" ProviderManifestToken="9.3.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="product_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int4" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="create_date" Type="timestamp" />
+          <Property Name="weight" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="default_code" Type="varchar" MaxLength="8000" />
+          <Property Name="name_template" Type="varchar" MaxLength="8000" />
+          <Property Name="create_uid" Type="int4" />
+          <Property Name="message_last_post" Type="timestamp" />
+          <Property Name="product_tmpl_id" Type="int4" Nullable="false" />
+          <Property Name="barcode" Type="varchar" MaxLength="8000" />
+          <Property Name="volume" Type="float8" />
+          <Property Name="write_date" Type="timestamp" />
+          <Property Name="active" Type="bool" />
+          <Property Name="write_uid" Type="int4" />
+        </EntityType>
+        <EntityContainer Name="soapros_desaModelStoreContainer">
+          <EntitySet Name="product_product" EntityType="Self.product_product" Schema="public" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="soapros_desaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="product_product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="create_date" Type="DateTime" Precision="6" />
+          <Property Name="weight" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="default_code" Type="String" MaxLength="8000" FixedLength="false" Unicode="true" />
+          <Property Name="name_template" Type="String" MaxLength="8000" FixedLength="false" Unicode="true" />
+          <Property Name="create_uid" Type="Int32" />
+          <Property Name="message_last_post" Type="DateTime" Precision="6" />
+          <Property Name="product_tmpl_id" Type="Int32" Nullable="false" />
+          <Property Name="barcode" Type="String" MaxLength="8000" FixedLength="false" Unicode="true" />
+          <Property Name="volume" Type="Double" />
+          <Property Name="write_date" Type="DateTime" Precision="6" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="write_uid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Postgress" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="product_product" EntityType="Self.product_product" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="soapros_desaModelStoreContainer" CdmEntityContainer="Postgress">
+          <EntitySetMapping Name="product_product">
+            <EntityTypeMapping TypeName="soapros_desaModel.product_product">
+              <MappingFragment StoreEntitySet="product_product">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="default_code" ColumnName="default_code" />
+                <ScalarProperty Name="name_template" ColumnName="name_template" />
+                <ScalarProperty Name="create_uid" ColumnName="create_uid" />
+                <ScalarProperty Name="message_last_post" ColumnName="message_last_post" />
+                <ScalarProperty Name="product_tmpl_id" ColumnName="product_tmpl_id" />
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="write_date" ColumnName="write_date" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="write_uid" ColumnName="write_uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
